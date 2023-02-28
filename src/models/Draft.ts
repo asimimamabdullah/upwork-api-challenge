@@ -3,21 +3,17 @@ import { Schema, model, SchemaOptions } from "mongoose";
 const optionsSchema = new Schema({
 	title: {
 		type: String,
-		required: true,
 	},
 	isTrue: {
 		type: Boolean,
-		required: true,
 	},
 });
 const questionsSchema: SchemaOptions = new Schema({
 	title: {
 		type: String,
-		required: true,
 	},
 	mandatory: {
 		type: Boolean,
-		required: true,
 		default: false,
 	},
 	options: [optionsSchema],
@@ -30,7 +26,6 @@ const quizSchema = new Schema({
 	},
 	title: {
 		type: String,
-		required: true,
 		trim: true,
 	},
 	description: {
@@ -40,4 +35,4 @@ const quizSchema = new Schema({
 	questions: [questionsSchema],
 });
 
-export const Quiz = model("Quiz", quizSchema);
+export const DraftedQuiz = model("DraftedQuiz", quizSchema);
