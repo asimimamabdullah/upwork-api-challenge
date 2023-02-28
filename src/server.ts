@@ -1,10 +1,4 @@
-import express, {
-	Errback,
-	ErrorRequestHandler,
-	NextFunction,
-	Request,
-	Response,
-} from "express";
+import express from "express";
 import { connectDB } from "./config/db";
 const app = express();
 
