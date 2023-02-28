@@ -10,5 +10,10 @@ const app = (0, express_1.default)();
 (0, db_1.connectDB)();
 app.use(express_1.default.json());
 app.use("/api", require("./routes/quizRoute"));
+app.get("/", (_req, res) => {
+    res.status(201).json({
+        message: "Welcome to API",
+    });
+});
 const port = 5000;
 app.listen(port, () => console.log("server running..."));
